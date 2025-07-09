@@ -5,7 +5,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
   const username = document.getElementById('username').value.trim();
   const password = document.getElementById('password').value.trim();
   
-  const res = await fetch('/auth/register', {
+  const res = await fetch('https://astha-task-manager-app.onrender.com/auth/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

@@ -55,7 +55,7 @@ form.addEventListener('submit', async (e) => {
   //   return;
   // }
   const method = id ? 'PUT' : 'POST';
-  const url = id ? `/tasks/${id}` : '/tasks';
+  const url = id ? `https://astha-task-manager-app.onrender.com/tasks/${id}` : 'https://astha-task-manager-app.onrender.com/tasks';
 
   try {
     await fetch(url, {
@@ -77,7 +77,7 @@ form.addEventListener('submit', async (e) => {
 // 🟢 Load All Tasks
 async function loadTasks() {
   try {
-    const res = await fetch('/tasks', {
+    const res = await fetch('https://astha-task-manager-app.onrender.com/tasks', {
       headers: { 'Authorization': `Bearer ${token}` }
     });
 
@@ -292,7 +292,7 @@ async function loadTasks() {
 // 🟢 Edit Task (prefill form)
 async function editTask(id) {
   try {
-    const res = await fetch(`/tasks/${id}`, {
+    const res = await fetch(`https://astha-task-manager-app.onrender.com/tasks/${id}`, {
       headers: { 'Authorization': `Bearer ${token}` }
     });
     const task = await res.json();
@@ -309,7 +309,7 @@ async function editTask(id) {
 // 🟢 Delete Task
 async function deleteTask(id) {
   try {
-    const res=await fetch(`/tasks/${id}`, {
+    const res=await fetch(`https://astha-task-manager-app.onrender.com/tasks/${id}`, {
       method: 'DELETE',
       headers: { 'Authorization': `Bearer ${token}` }
     });
@@ -339,7 +339,7 @@ loadTasks();
 // 🟢 Toggle Task Status
 async function toggleStatus(id) {
   try {
-    await fetch(`/tasks/${id}`, {
+    await fetch(`https://astha-task-manager-app.onrender.com/tasks/${id}`, {
       method: 'PATCH',
       headers: { 'Authorization': `Bearer ${token}` }
     });
