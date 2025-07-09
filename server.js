@@ -169,8 +169,7 @@
 // app.listen(PORT, () => {
 //   console.log(`Server running at http://localhost:${PORT}`);
 // });
-const cors = require('cors');
-app.use(cors({ origin: 'https://astha-task-manager-app.onrender.com/', credentials: true }));
+
 
 require('dotenv').config();
 const express = require('express');
@@ -180,11 +179,13 @@ const taskRoutes = require('./routes/tasks');
 const authMiddleware = require('./middleware/auth');
 
 const app = express();
+const cors = require('cors');
+app.use(cors({ origin: 'https://astha-task-manager-app.onrender.com/', credentials: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
 
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error(err));
 
