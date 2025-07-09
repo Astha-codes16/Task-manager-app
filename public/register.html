@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: sans-serif;
+    margin: 20px;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  input, textarea, button {
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #calendar {
+    max-width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+  }
+
+  ul#taskList {
+    padding: 0;
+    list-style-type: none;
+    max-width: 500px;
+  }
+
+  @media (max-width: 600px) {
+    h1, h2 {
+      font-size: 1.4rem;
+    }
+
+    #myModal {
+      width: 90%;
+    }
+
+    body {
+      margin: 10px;
+    }
+  }
+</style>
+
+</head>
+<body>
+  <h1>Register</h1>
+  <form id="registerForm">
+    <input type="text" id="username" placeholder="Username" required><br><br>
+    <input type="password" id="password" placeholder="Password" required><br><br>
+    <button type="submit">Register</button>
+  </form>
+  <p id="message"></p>
+
+  <script src="register.js"></script>
+</body>
+</html>
