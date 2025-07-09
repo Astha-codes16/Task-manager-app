@@ -15,8 +15,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
     body: JSON.stringify({ username, password })
   });
   if (!res.ok) {
-      const text = await res.text();
-      throw new Error(`Registration failed: ${text}`);
+     alert("Username Already Exist!");
     }
   const data = await res.json();
   
