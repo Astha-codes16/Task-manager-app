@@ -180,7 +180,7 @@ const authMiddleware = require('./middleware/auth');
 
 const app = express();
 const cors = require('cors');
-app.use(cors({ origin: 'https://astha-task-manager-app.onrender.com/', credentials: true }));
+app.use(cors({ origin: 'https://astha-task-manager-app.onrender.com' }));
 app.use(express.json());
 app.use(express.static('public'));
 
@@ -191,8 +191,9 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 
 app.use('/auth', authRoutes);
 app.use('/tasks', authMiddleware, taskRoutes);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
 
-app.listen(3000, () => console.log('Server running on http://localhost:3000'));
 
 
 
