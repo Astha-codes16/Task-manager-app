@@ -184,8 +184,8 @@ app.use(cors({ origin: 'https://astha-task-manager-app.onrender.com/', credentia
 app.use(express.json());
 app.use(express.static('public'));
 
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 
-mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error(err));
 
