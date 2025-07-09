@@ -23,7 +23,8 @@ form.addEventListener('submit', async (e) => {
 
   if (res.ok) {
     localStorage.setItem('token', data.token);
-    window.location.href = 'index1.html'; // Redirect to task planner
+    window.location.href = 'https://astha-task-manager-app.onrender.com/index1.html';
+ // Redirect to task planner
   } else {
     document.getElementById('message').textContent = data.error;
   }

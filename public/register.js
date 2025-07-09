@@ -24,7 +24,8 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
 
     // Redirect to login page after 2 seconds
     setTimeout(() => {
-      window.location.href = '/login.html';
+      window.location.href = 'https://astha-task-manager-app.onrender.com/login.html';
+
     }, 2000);
   } else {
     message.style.color = 'red';
