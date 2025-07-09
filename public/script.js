@@ -35,7 +35,9 @@ form.addEventListener('submit', async (e) => {
 //     alert("Deadline must be in the future!");
 //     return;
 //   }
- const deadline = document.getElementById('deadline').value;
+
+ const deadline = new Date(document.getElementById('deadline').value).toISOString();
+
  const date=new Date(deadline);
  const now=new Date();
  if(date<=now)
