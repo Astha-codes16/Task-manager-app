@@ -174,16 +174,18 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const app = express();
+
 const authRoutes = require('./routes/auth');
 const taskRoutes = require('./routes/tasks');
 const authMiddleware = require('./middleware/auth');
 
-const app = express();
-const cors = require('cors');
-app.use(cors({ origin: 'https://astha-task-manager-app.onrender.com' }));
+
+
+
 app.use(express.json());
 app.use(express.static('public'));
-
+console.log("Connecting to mongodb",process.env.MONGO_URI);
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 
   .then(() => console.log('MongoDB connected'))
