@@ -10,9 +10,14 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
     headers: {
       'Content-Type': 'application/json'
     },
+ 
+
     body: JSON.stringify({ username, password })
   });
-
+  if (!res.ok) {
+      const text = await res.text();
+      throw new Error(`Registration failed: ${text}`);
+    }
   const data = await res.json();
   
   const message = document.getElementById('message');
