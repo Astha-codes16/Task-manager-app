@@ -23,7 +23,7 @@ form.addEventListener('submit', async (e) => {
 
   if (res.ok) {
     localStorage.setItem('token', data.token);
-    window.location.href = 'index.html'; // Redirect to task planner
+    window.location.href = 'index1.html'; // Redirect to task planner
   } else {
     document.getElementById('message').textContent = data.error;
   }
