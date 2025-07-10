@@ -34,7 +34,8 @@ A full-featured, privacy-focused task manager web app built using **Node.js, Exp
 - **Backend**: Node.js, Express.js  
 - **Database**: MongoDB  
 - **Version Control**: Git & GitHub  
-- **Deployment**: Render *(coming soon)*
+- **Deployment**: Render
+- **🔗live link**:https://astha-task-manager-app.onrender.com/register.html
 
 ---
 
