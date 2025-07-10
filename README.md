@@ -38,12 +38,6 @@ A full-featured, privacy-focused task manager web app built using **Node.js, Exp
 
 ---
 
-## 📸 Screenshots
-
-*(Coming soon – Add screenshots of the landing page, task view, calendar modal, etc.)*
-
----
-
 ## 📦 Installation (for local testing)
 
 ```bash
